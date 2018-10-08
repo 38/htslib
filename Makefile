@@ -34,7 +34,7 @@ CPPFLAGS =
 # For testing strict C99 support add -std=c99 -D_XOPEN_SOURCE=600
 #CFLAGS   = -g -Wall -O2 -pedantic -std=c99 -D_XOPEN_SOURCE=600 -D__FUNCTION__=__func__
 CFLAGS   = -g -Wall -O2
-EXTRA_CFLAGS_PIC = -fpic
+EXTRA_CFLAGS_PIC = 
 LDFLAGS  =
 LIBS     = $(htslib_default_libs)
 
@@ -87,7 +87,7 @@ BUILT_THRASH_PROGRAMS = \
 	test/thrash_threads5 \
 	test/thrash_threads6
 
-all: lib-static lib-shared $(BUILT_PROGRAMS) plugins $(BUILT_TEST_PROGRAMS)
+all: lib-static $(BUILT_PROGRAMS) plugins $(BUILT_TEST_PROGRAMS)
 
 HTSPREFIX =
 include htslib_vars.mk
